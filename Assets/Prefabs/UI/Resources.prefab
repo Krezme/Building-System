@@ -984,8 +984,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Resources, Assembly-CSharp
-        m_MethodName: AddWood
-        m_Mode: 3
+        m_MethodName: AddWoodResourceButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1117,8 +1117,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Resources, Assembly-CSharp
-        m_MethodName: AddMetal
-        m_Mode: 3
+        m_MethodName: AddMetalResourceButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1798,8 +1798,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Resources, Assembly-CSharp
-        m_MethodName: AddStone
-        m_Mode: 3
+        m_MethodName: AddStoneResourceButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

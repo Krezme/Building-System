@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class BuildingRequestPanelUI : MonoBehaviour
 {
-    public RectTransform mask;
+    public RectTransform layoutPanel;
     public GameObject buildingRequestUIPrefab;
     public Animator animator;
+
+    public DowngradeButtonFunc downgradeButtonFunc;
+    public DestroyButtonFunc destroyButtonFunc;
     
     private bool hasFocusedBuildingSlot;
 
@@ -19,13 +22,13 @@ public class BuildingRequestPanelUI : MonoBehaviour
                 CanvasManager.instance.ClearBuildRequestUIsList();
             } 
             ToggleAnimation(hasFocusedBuildingSlot);
-            CheckButtonAvailability(CanvasManager.instance.downgradeButtonFunc);
-            CheckButtonAvailability(CanvasManager.instance.destroyButtonFunc);
+            CheckButtonAvailability(downgradeButtonFunc);
+            CheckButtonAvailability(destroyButtonFunc);
         }
     }
 
     public GameObject InstantiateBuildRequestUI() {
-        GameObject newBuildRequestUI = Instantiate(buildingRequestUIPrefab, mask.transform);
+        GameObject newBuildRequestUI = Instantiate(buildingRequestUIPrefab, layoutPanel.transform);
         CanvasManager.instance.buildRequestUIs.Add(newBuildRequestUI.GetComponent<BuildRequestUI>());
         return newBuildRequestUI;
     }

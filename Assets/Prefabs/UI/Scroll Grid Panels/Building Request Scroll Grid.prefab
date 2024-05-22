@@ -465,10 +465,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85bc13ef848b5b74e93936576c3dbfdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mask: {fileID: 4397015690803539813}
+  layoutPanel: {fileID: 4397015690803539813}
   buildingRequestUIPrefab: {fileID: 3953300218781582746, guid: 6083353aed676d54b80209a443512e5b,
     type: 3}
   animator: {fileID: 4383589600306099611}
+  downgradeButtonFunc: {fileID: 4316294913047621217}
+  destroyButtonFunc: {fileID: 4804865644494451341}
 --- !u!1 &3903875505139904819
 GameObject:
   m_ObjectHideFlags: 0

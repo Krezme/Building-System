@@ -20,11 +20,14 @@ public class CanvasManager : MonoBehaviour
     }
     #endregion
 
+    [Header("BuildingSlot References")]
+    public BuildingSlotsPanelUI buildingSlotsPanelUI;
+
+    [Header("BuildingRequest References")]
     public BuildingRequestPanelUI buildingRequestScrollGridPanel;
-    public DowngradeButtonFunc downgradeButtonFunc;
-    public DestroyButtonFunc destroyButtonFunc;
-    
     public List<BuildRequestUI> buildRequestUIs;
+
+    [Header("Resources References")]
     public TMP_Text currentWoodAmountText;
     public TMP_Text currentStoneAmountText;
     public TMP_Text currentMetalAmountText;

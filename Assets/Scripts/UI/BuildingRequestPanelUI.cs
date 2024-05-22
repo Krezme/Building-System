@@ -19,7 +19,8 @@ public class BuildingRequestPanelUI : MonoBehaviour
                 CanvasManager.instance.ClearBuildRequestUIsList();
             } 
             ToggleAnimation(hasFocusedBuildingSlot);
-            CheckDestroyButtonAvailability();
+            CheckButtonAvailability(CanvasManager.instance.downgradeButtonFunc);
+            CheckButtonAvailability(CanvasManager.instance.destroyButtonFunc);
         }
     }
 
@@ -29,10 +30,9 @@ public class BuildingRequestPanelUI : MonoBehaviour
         return newBuildRequestUI;
     }
 
-    public void CheckDestroyButtonAvailability() {
+    public void CheckButtonAvailability(ReversingSlotButtonsFunc reversingSlotButtonsFunc) {
         if (HasFocusedBuildingSlot) {
-            Debug.Log("ASDASDASD");
-            CanvasManager.instance.destroyButtonFunc.button.interactable = PlayerController.instance.focusedBuildingSlot.CanDestroyBuilding();
+            reversingSlotButtonsFunc.button.interactable = reversingSlotButtonsFunc.IsButtonAvailable();
         }
     }
 

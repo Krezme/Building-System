@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DestroyButtonFunc : MonoBehaviour
+public abstract class ReversingSlotButtonsFunc : MonoBehaviour
 {
     public Button button;
-    public void DestroyHouse() {
-        PlayerController.instance.focusedBuildingSlot.ReturnBuildingSlotToDefault();
+
+    public abstract bool IsButtonAvailable();
+
+    public virtual void ReverseBuildingSlot() {
         PlayerController.instance.ResetFocus();
     }
+
 }

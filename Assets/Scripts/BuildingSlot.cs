@@ -40,7 +40,7 @@ public class BuildingSlot : MonoBehaviour
         return false;
     }
 
-    public void SpawnNextHouse (HouseUpgradeInfo houseToPlace) {
+    public void SpawnNextBuilding (HouseUpgradeInfo houseToPlace) {
         Debug.Log(houseToPlace.buildingName + " 1 " + placableHouses[placableHouses.Count-1].buildingName);
         if (placableHouses[placableHouses.Count-1].nextHouses.Count <= 0)
         {
@@ -49,6 +49,24 @@ public class BuildingSlot : MonoBehaviour
             return;
         }
 
+        SpawnBuilding(houseToPlace);
+    }
+
+    public bool CanDowngradeBuilding() {
+        if (placableHouses[placableHouses.Count -1] != defaultPlacableHouse && placableHouses[placableHouses.Count -2] != defaultPlacableHouse) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public void SpawnPreviousBuilding() {
+        HouseUpgradeInfo houseToPlace = placableHouses[placableHouses.Count -2];
+        placableHouses.RemoveRange(placableHouses.Count-2, 2);
+        SpawnBuilding(houseToPlace);
+    }
+
+    private void SpawnBuilding(HouseUpgradeInfo houseToPlace) {
         if (spawnedHouse != null) { 
             Destroy(spawnedHouse);
         }
@@ -61,10 +79,6 @@ public class BuildingSlot : MonoBehaviour
         if (placableHouses[placableHouses.Count-1].nextHouses.Count > 0) {
             placableHouses.Add(houseToPlace);
         }
-    }
-
-    public void DowngradeHouse() {
-
     }
 
     public bool CanDestroyBuilding() {

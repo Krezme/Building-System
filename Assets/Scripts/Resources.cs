@@ -21,75 +21,25 @@ public class Resources : MonoBehaviour //! Can divide this into inherited classe
     }
     #endregion
 
-    public int startingWood;
-    public int startingStone;
-    public int startingMetal;
-
-    private int wood;
-    private int stone;
-    private int metal;
-
-    public int Wood {
-        get { return wood; }
-        private set { 
-            wood = value;
-            SetTMPText(CanvasManager.instance.currentWoodAmountText, wood.ToString());
-        }
-    }
-
-    public int Stone {
-        get { return stone; }
-        private set { 
-            stone = value;
-            SetTMPText(CanvasManager.instance.currentStoneAmountText, stone.ToString());
-        }
-    }
-
-    public int Metal {
-        get { return metal; }
-        private set { 
-            metal = value;
-            SetTMPText(CanvasManager.instance.currentMetalAmountText, metal.ToString());
-        }
-    }
+    public Wood woodResource;
+    public Stone stoneResource;
+    public Metal metalResource;
 
     void Start () {
-        AddWood(startingWood);
-        AddStone(startingStone);
-        AddMetal(startingMetal);
+        woodResource.AddResource(woodResource.startAmount);
+        stoneResource.AddResource(stoneResource.startAmount);
+        metalResource.AddResource(metalResource.startAmount);
     }
 
-    private void SetTMPText(TMP_Text textOnScreen, string text) {
-        textOnScreen.text = text;
+    public void AddWoodResourceButton() {
+        woodResource.AddResourceButtonClick();
     }
 
-    public void AddWood (int amount) {
-        Wood += amount;
+    public void AddStoneResourceButton() {
+        stoneResource.AddResourceButtonClick();
     }
 
-    public void SubtractWood(int amount) {
-        if (amount <= Wood) {
-            Wood -= amount;
-        }
-    }
-
-    public void AddStone (int amount) {
-        Stone += amount;
-    }
-
-    public void SubtractStone(int amount) {
-        if (amount <= Stone) {
-            Stone -= amount;
-        }
-    }
-
-    public void AddMetal (int amount) {
-        Metal += amount;
-    }
-
-    public void SubtractMetal(int amount) {
-        if (amount <= Metal) {
-            Metal -= amount;
-        }
+    public void AddMetalResourceButton() {
+        metalResource.AddResourceButtonClick();
     }
 }

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CameraInputs : MonoBehaviour
+public class PlayerInputs : MonoBehaviour
 {   
     #region Sigleton
-    public static CameraInputs instance;
+    public static PlayerInputs instance;
 
     void Awake() {
         if (instance != null) {

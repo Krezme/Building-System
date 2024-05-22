@@ -11,7 +11,9 @@ public class DestroyButtonFunc : ReversingSlotButtonsFunc
 
     public override void ReverseBuildingSlot()
     {
-        PlayerController.instance.focusedBuildingSlot.ReturnBuildingSlotToDefault();
+        if (PlayerController.instance.focusedBuildingSlot != null) {
+            PlayerController.instance.focusedBuildingSlot.ReturnBuildingSlotToDefault();
+        }
         base.ReverseBuildingSlot();
     }
 }

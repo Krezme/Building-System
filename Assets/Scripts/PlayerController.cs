@@ -32,11 +32,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         OnClick();
-        CameraInputs.instance.onFire = false;
+        PlayerInputs.instance.onFire = false;
     }
 
     void OnClick () {
-        if (!CameraInputs.instance.onFire || EventSystem.current.IsPointerOverGameObject()) {
+        if (!PlayerInputs.instance.onFire || EventSystem.current.IsPointerOverGameObject()) {
             return;
         }
 

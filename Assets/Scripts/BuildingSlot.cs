@@ -16,9 +16,7 @@ public class BuildingSlot : MonoBehaviour
     }
 
     public void FocusThis(bool state) {
-        if (placableHouses[placableHouses.Count -1].nextHouses.Count > 0) {
-            CanvasManager.instance.buildingRequestScrollGridPanel.HasFocusedBuildingSlot = state;
-        }
+        CanvasManager.instance.buildingRequestScrollGridPanel.HasFocusedBuildingSlot = state;
         if (CanvasManager.instance.buildingRequestScrollGridPanel.HasFocusedBuildingSlot) {
             for (int i = 0; i < placableHouses[placableHouses.Count -1].nextHouses.Count; i++) {
                 CanvasManager.instance.buildingRequestScrollGridPanel.InstantiateBuildRequestUI();
@@ -44,7 +42,6 @@ public class BuildingSlot : MonoBehaviour
         Debug.Log(houseToPlace.buildingName + " 1 " + placableHouses[placableHouses.Count-1].buildingName);
         if (placableHouses[placableHouses.Count-1].nextHouses.Count <= 0)
         {
-            
             Debug.Log("Maxed out the upgrades");
             return;
         }

@@ -5,9 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class Stone : Resource
 {
-    protected override void OverrideAmountSet() {
-        base.OverrideAmountSet();
-
+    protected override void AmountSetOverride() {
         SetTMPText(CanvasManager.instance.currentStoneAmountText, Amount.ToString());
     }
 }

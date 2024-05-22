@@ -6,9 +6,7 @@ using UnityEngine;
 public class Wood : Resource
 {
 
-    protected override void OverrideAmountSet() {
-        base.OverrideAmountSet();
-
+    protected override void AmountSetOverride() {
         SetTMPText(CanvasManager.instance.currentWoodAmountText, Amount.ToString());
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 
 [System.Serializable]
-public class Resource
+public abstract class Resource
 {
     public int startAmount;
     public int amountToAddPerButtonClick;
@@ -14,11 +14,11 @@ public class Resource
         get { return amount; }
         set { 
             amount = value;
-            OverrideAmountSet();
+            AmountSetOverride();
         }
     }
     
-    protected virtual void OverrideAmountSet () {}
+    protected abstract void AmountSetOverride ();
 
     public void AddResource(int amountToAdd) {
         

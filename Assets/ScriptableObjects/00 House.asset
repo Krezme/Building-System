@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f378292f65201cf43a9cbe1cd0df5ad2, type: 3}
-  m_Name: 01 House
+  m_Name: 00 House
   m_EditorClassIdentifier: 
-  buildingName: Log House
-  housePrefab: {fileID: 100002, guid: 14f682f9e2d04af4396f95b882219950, type: 3}
-  woodRequired: 10
+  buildingName: 
+  housePrefab: {fileID: 0}
+  woodRequired: 0
   stoneRequired: 0
   metalRequired: 0
   nextHouses:
-  - {fileID: 11400000, guid: 0040bf2d42b030a45aaddcded80abf74, type: 2}
+  - {fileID: 11400000, guid: c4fca9d11623c9a479e7408b96396c6d, type: 2}

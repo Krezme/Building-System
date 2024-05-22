@@ -9,5 +9,5 @@ public class HouseUpgradeInfo : ScriptableObject
     public GameObject housePrefab;
     public int woodRequired, stoneRequired, metalRequired;
 
-    public HouseUpgradeInfo nextHouse;
+    public List<HouseUpgradeInfo> nextHouses;
 }

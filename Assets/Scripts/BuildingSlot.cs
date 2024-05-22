@@ -10,10 +10,20 @@ public class BuildingSlot : MonoBehaviour
 
     private HouseUpgradeInfo currentlyPlacedHouseUpgradeInfo;
     private GameObject spawnedHouse;
-        
-    public void SpawnNextHouse () {
-        if (currentlyPlacedHouseUpgradeInfo == placableHouses[placableHouses.Count-1])
+
+    public void FocusThis(bool state) {
+
+        for (int i = 0; i < CanvasManager.instance.buildRequestUIs.Count && i < placableHouses[placableHouses.Count -1].nextHouses.Count; i++) {
+            CanvasManager.instance.buildRequestUIs[i].FocusedBuildingSlot = state;
+            CanvasManager.instance.buildRequestUIs[i].SetVariables(placableHouses[placableHouses.Count -1].nextHouses[i], this);
+        }
+    }
+
+    public void SpawnNextHouse (HouseUpgradeInfo houseToPlace) {
+        Debug.Log(houseToPlace.buildingName + " 1 " + placableHouses[placableHouses.Count-1].buildingName);
+        if (placableHouses[placableHouses.Count-1].nextHouses.Count <= 0)
         {
+            
             Debug.Log("Maxed out the upgrades");
             return;
         }
@@ -22,14 +32,14 @@ public class BuildingSlot : MonoBehaviour
             Destroy(spawnedHouse);
         }
 
-        spawnedHouse = Instantiate(placableHouses[placableHouses.Count-1].housePrefab);
-        currentlyPlacedHouseUpgradeInfo = placableHouses[placableHouses.Count-1];
+        spawnedHouse = Instantiate(houseToPlace.housePrefab);
+        currentlyPlacedHouseUpgradeInfo = houseToPlace;
 
         spawnedHouse.transform.parent = gameObject.transform;
         spawnedHouse.transform.localPosition = Vector3.zero;
 
-        if (placableHouses[placableHouses.Count-1].nextHouse != null) {
-            placableHouses.Add(placableHouses[placableHouses.Count-1].nextHouse);
+        if (placableHouses[placableHouses.Count-1].nextHouses.Count > 0) {
+            placableHouses.Add(houseToPlace);
         }
     }
 }

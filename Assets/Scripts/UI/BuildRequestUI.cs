@@ -7,23 +7,11 @@ using UnityEngine.UI;
 
 public class BuildRequestUI : MonoBehaviour
 {
-    public Animator animator;
-
     public TMP_Text nameText;
     public TMP_Text woodCostAmountText;
     public TMP_Text stoneCostAmountText;
     public TMP_Text metalCostAmountText;
     public Button button;
-
-    private bool focusedBuildingSlot;
-
-    public bool FocusedBuildingSlot {
-        get { return focusedBuildingSlot; }
-        set {
-            focusedBuildingSlot = value;
-            ToggleAnimation(focusedBuildingSlot); 
-        }
-    }
 
     private HouseUpgradeInfo houseUpgradeInfoToShow;
     private BuildingSlot buildingSlotToActivate;
@@ -49,9 +37,5 @@ public class BuildRequestUI : MonoBehaviour
             buildingSlotToActivate.SpawnNextHouse(houseUpgradeInfoToShow);
             button.onClick.RemoveAllListeners();
         }
-    }
-
-    private void ToggleAnimation (bool state) {
-        animator.SetBool("Show", state);
     }
 }

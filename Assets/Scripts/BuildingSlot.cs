@@ -12,10 +12,15 @@ public class BuildingSlot : MonoBehaviour
     private GameObject spawnedHouse;
 
     public void FocusThis(bool state) {
-
-        for (int i = 0; i < CanvasManager.instance.buildRequestUIs.Count && i < placableHouses[placableHouses.Count -1].nextHouses.Count; i++) {
-            CanvasManager.instance.buildRequestUIs[i].FocusedBuildingSlot = state;
-            CanvasManager.instance.buildRequestUIs[i].SetVariables(placableHouses[placableHouses.Count -1].nextHouses[i], this);
+        if (placableHouses[placableHouses.Count -1].nextHouses.Count > 0) {
+            CanvasManager.instance.buildingRequestScrollGridPanel.FocusedBuildingSlot = state;
+        }
+        if (CanvasManager.instance.buildingRequestScrollGridPanel.FocusedBuildingSlot) {
+            for (int i = 0; i < placableHouses[placableHouses.Count -1].nextHouses.Count; i++) {
+                CanvasManager.instance.buildingRequestScrollGridPanel.InstantiateBuildRequestUI();
+                
+                CanvasManager.instance.buildRequestUIs[i].SetVariables(placableHouses[placableHouses.Count -1].nextHouses[i], this);
+            }
         }
     }
 

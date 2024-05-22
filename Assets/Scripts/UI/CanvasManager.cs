@@ -19,9 +19,18 @@ public class CanvasManager : MonoBehaviour
         }
     }
     #endregion
+
+    public BuildingRequestPanelUI buildingRequestScrollGridPanel;
     
     public List<BuildRequestUI> buildRequestUIs;
     public TMP_Text currentWoodAmountText;
     public TMP_Text currentStoneAmountText;
     public TMP_Text currentMetalAmountText;
+
+    public void ClearBuildRequestUIsList() {
+        for (int i = 0; i < buildRequestUIs.Count; i++) {
+            Destroy(buildRequestUIs[i].gameObject);
+        }
+        buildRequestUIs.Clear();
+    }
 }

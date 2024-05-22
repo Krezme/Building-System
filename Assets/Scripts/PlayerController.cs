@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, 10000f, layerMask)) {
-            SetFocusedBuildingSlot(hit.collider.gameObject.GetComponent<BuildingSlot>(), true);
+            TryToFocusBuildingSlot(hit.collider.gameObject.GetComponent<BuildingSlot>(), true);
         }
         else {
             if (focusedBuildingSlot != null) {
@@ -55,11 +55,24 @@ public class PlayerController : MonoBehaviour
 
     public void ResetFocus() {
         SetFocusedBuildingSlot(focusedBuildingSlot, false);
-        focusedBuildingSlot = null;
     }
 
-    public void SetFocusedBuildingSlot (BuildingSlot buildingSlotToFocus, bool focusState) {
-        focusedBuildingSlot = buildingSlotToFocus;
+    public bool TryToFocusBuildingSlot(BuildingSlot buildingSlotToFocus, bool focusState) {
+        if (focusedBuildingSlot != buildingSlotToFocus) {
+            SetFocusedBuildingSlot(buildingSlotToFocus, true);
+            return true;
+        }
+
+        return false;
+    }
+
+    private void SetFocusedBuildingSlot (BuildingSlot buildingSlotToFocus, bool focusState) {
         buildingSlotToFocus.FocusThis(focusState);
+        if (focusState) {
+            focusedBuildingSlot = buildingSlotToFocus;
+        }
+        else {
+            focusedBuildingSlot = null;
+        }
     }
 }

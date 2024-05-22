@@ -7,6 +7,6 @@ public class SelectBuildSlotUI : MonoBehaviour
     public BuildingSlot buildingSlot;
 
     public void SelectBuildSlotButton() {
-        PlayerController.instance.SetFocusedBuildingSlot(buildingSlot, true);
+        PlayerController.instance.TryToFocusBuildingSlot(buildingSlot, true);
     }
 }

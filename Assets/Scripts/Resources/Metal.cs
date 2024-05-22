@@ -7,6 +7,6 @@ public class Metal : Resource
 {
 
     protected override void AmountSetOverride() {
-        SetTMPText(CanvasManager.instance.currentMetalAmountText, Amount.ToString());
+        SetTMPText(CanvasManager.instance.currentResourcesAmountTexts.metalText, Amount.ToString());
     }
 }

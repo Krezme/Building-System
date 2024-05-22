@@ -6,6 +6,6 @@ using UnityEngine;
 public class Stone : Resource
 {
     protected override void AmountSetOverride() {
-        SetTMPText(CanvasManager.instance.currentStoneAmountText, Amount.ToString());
+        SetTMPText(CanvasManager.instance.currentResourcesAmountTexts.stoneText, Amount.ToString());
     }
 }

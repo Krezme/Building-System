@@ -7,9 +7,7 @@ using UnityEngine.UI;
 public class BuildRequestUI : MonoBehaviour
 {
     public TMP_Text nameText;
-    public TMP_Text woodCostAmountText;
-    public TMP_Text stoneCostAmountText;
-    public TMP_Text metalCostAmountText;
+    public ResourcesTMP_TextComponents resourcesCostAmountTexts;
     public Button button;
 
     private HouseUpgradeInfo houseUpgradeInfoToShow;
@@ -24,9 +22,9 @@ public class BuildRequestUI : MonoBehaviour
 
     private void BuildingRequest() {
         nameText.text = houseUpgradeInfoToShow.buildingName;
-        woodCostAmountText.text = houseUpgradeInfoToShow.woodRequired.ToString();
-        stoneCostAmountText.text = houseUpgradeInfoToShow.stoneRequired.ToString();
-        metalCostAmountText.text = houseUpgradeInfoToShow.metalRequired.ToString();
+        resourcesCostAmountTexts.woodText.text = houseUpgradeInfoToShow.woodRequired.ToString();
+        resourcesCostAmountTexts.stoneText.text = houseUpgradeInfoToShow.stoneRequired.ToString();
+        resourcesCostAmountTexts.metalText.text = houseUpgradeInfoToShow.metalRequired.ToString();
         button.onClick.AddListener(() => TryBuilding());
     }
 
@@ -34,7 +32,7 @@ public class BuildRequestUI : MonoBehaviour
         if (buildingSlotToActivate.TrySpendingResources(houseUpgradeInfoToShow.woodRequired, houseUpgradeInfoToShow.stoneRequired, houseUpgradeInfoToShow.metalRequired)) {
             buildingSlotToActivate.SpawnNextBuilding(houseUpgradeInfoToShow);
             button.onClick.RemoveAllListeners();
-            PlayerController.instance.ResetFocus();
+            FocusSlotFunc.ResetFocus();
         }
     }
 }

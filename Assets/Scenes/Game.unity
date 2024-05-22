@@ -1336,9 +1336,10 @@ MonoBehaviour:
   buildingSlotsPanelUI: {fileID: 8286946683902382366}
   buildingRequestScrollGridPanel: {fileID: 1261432989}
   buildRequestUIs: []
-  currentWoodAmountText: {fileID: 9659623}
-  currentStoneAmountText: {fileID: 65845570}
-  currentMetalAmountText: {fileID: 958776233}
+  currentResourcesAmountTexts:
+    woodText: {fileID: 9659623}
+    stoneText: {fileID: 65845570}
+    metalText: {fileID: 958776233}
 --- !u!224 &1583149532 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3374005816648857600, guid: b62d70e1cba196044b1068be57638085,

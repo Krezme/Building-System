@@ -20,15 +20,6 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask layerMask;
 
-    public BuildingSlot focusedBuildingSlot {get; private set;} 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         OnClick();
@@ -44,40 +35,12 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, 10000f, layerMask)) {
-            TryToFocusBuildingSlot(hit.collider.gameObject.GetComponent<BuildingSlot>(), true);
+            FocusSlotFunc.TryToFocusBuildingSlot(hit.collider.gameObject.GetComponent<BuildingSlot>(), true);
         }
         else {
-            if (focusedBuildingSlot != null) {
-                ResetFocus();
+            if (FocusSlotFunc.focusedBuildingSlot != null) {
+                FocusSlotFunc.ResetFocus();
             }
         }
-    }
-
-    public void ResetFocus() {
-        SetFocusedBuildingSlot(focusedBuildingSlot, false);
-    }
-
-    public bool TryToFocusBuildingSlot(BuildingSlot buildingSlotToFocus, bool focusState) {
-        if (focusedBuildingSlot != buildingSlotToFocus) {
-            if (focusedBuildingSlot != null) {
-                ResetFocus();
-            }
-
-            SetFocusedBuildingSlot(buildingSlotToFocus, true);
-            return true;
-        }
-
-        return false;
-    }
-
-    private void SetFocusedBuildingSlot (BuildingSlot buildingSlotToFocus, bool focusState) {
-        if (focusState) {
-            focusedBuildingSlot = buildingSlotToFocus;
-        }
-        else {
-            CanvasManager.instance.buildingRequestScrollGridPanel.HasFocusedBuildingSlot = false;
-            focusedBuildingSlot = null;
-        }
-        buildingSlotToFocus.FocusThis(focusState);
     }
 }

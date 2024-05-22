@@ -5,11 +5,11 @@ using UnityEngine;
 public class DowngradeButtonFunc : ReversingSlotButtonsFunc
 {
     public override bool IsButtonAvailable() {
-        return PlayerController.instance.focusedBuildingSlot.CanDowngradeBuilding();
+        return FocusSlotFunc.focusedBuildingSlot.CanDowngradeBuilding();
     }
     public override void ReverseBuildingSlot()
     {
-        PlayerController.instance.focusedBuildingSlot.SpawnPreviousBuilding();
+        FocusSlotFunc.focusedBuildingSlot.SpawnPreviousBuilding();
         base.ReverseBuildingSlot();
     }
 }

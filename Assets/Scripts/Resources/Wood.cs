@@ -7,6 +7,6 @@ public class Wood : Resource
 {
 
     protected override void AmountSetOverride() {
-        SetTMPText(CanvasManager.instance.currentWoodAmountText, Amount.ToString());
+        SetTMPText(CanvasManager.instance.currentResourcesAmountTexts.woodText, Amount.ToString());
     }
 }

@@ -10,20 +10,9 @@ public class BuildingRequestPanelUI : MonoBehaviour
 
     public DowngradeButtonFunc downgradeButtonFunc;
     public DestroyButtonFunc destroyButtonFunc;
-    
-    private bool hasFocusedBuildingSlot;
 
-    public bool HasFocusedBuildingSlot {
-        get { return hasFocusedBuildingSlot; }
-        set {
-            hasFocusedBuildingSlot = value;
-            if (!hasFocusedBuildingSlot) {
-                CanvasManager.instance.ClearBuildRequestUIsList();
-            } 
-            ToggleAnimation(hasFocusedBuildingSlot);
-            CheckButtonAvailability(downgradeButtonFunc);
-            CheckButtonAvailability(destroyButtonFunc);
-        }
+    void Start () {
+        FocusSlotFunc.onHasFocusedBuildingSlot += ActivateOnHasFocusedBuildingSlot;
     }
 
     public GameObject InstantiateBuildRequestUI() {
@@ -32,8 +21,17 @@ public class BuildingRequestPanelUI : MonoBehaviour
         return newBuildRequestUI;
     }
 
+    private void ActivateOnHasFocusedBuildingSlot() {
+        if (!FocusSlotFunc.HasFocusedBuildingSlot) {
+            CanvasManager.instance.ClearBuildRequestUIsList();
+        } 
+        ToggleAnimation(FocusSlotFunc.HasFocusedBuildingSlot);
+        CheckButtonAvailability(downgradeButtonFunc);
+        CheckButtonAvailability(destroyButtonFunc);
+    }
+
     private void CheckButtonAvailability(ReversingSlotButtonsFunc reversingSlotButtonsFunc) {
-        if (HasFocusedBuildingSlot) {
+        if (FocusSlotFunc.HasFocusedBuildingSlot) {
             reversingSlotButtonsFunc.button.interactable = reversingSlotButtonsFunc.IsButtonAvailable();
         }
     }

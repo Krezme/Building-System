@@ -15,17 +15,6 @@ public class BuildingSlot : MonoBehaviour
         placableHouses.Add(defaultPlacableHouse);
     }
 
-    public void FocusThis(bool state) {
-        CanvasManager.instance.buildingRequestScrollGridPanel.HasFocusedBuildingSlot = state;
-        if (CanvasManager.instance.buildingRequestScrollGridPanel.HasFocusedBuildingSlot) {
-            for (int i = 0; i < placableHouses[placableHouses.Count -1].nextHouses.Count; i++) {
-                CanvasManager.instance.buildingRequestScrollGridPanel.InstantiateBuildRequestUI();
-                
-                CanvasManager.instance.buildRequestUIs[i].SetVariables(placableHouses[placableHouses.Count -1].nextHouses[i], this);
-            }
-        }
-    }
-
     public bool TrySpendingResources (int woodCost, int stoneCost, int metalCost) {
         if (woodCost <= Resources.instance.woodResource.Amount && stoneCost <= Resources.instance.stoneResource.Amount && metalCost <= Resources.instance.metalResource.Amount) {
             Debug.Log("TRUE?");

@@ -491,9 +491,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 2980004323945367531}
-  woodCostAmountText: {fileID: 5099388788397815261}
-  stoneCostAmountText: {fileID: 7357691355252120177}
-  metalCostAmountText: {fileID: 6180954266771139920}
+  resourcesCostAmountTexts:
+    woodText: {fileID: 5099388788397815261}
+    stoneText: {fileID: 7357691355252120177}
+    metalText: {fileID: 6180954266771139920}
   button: {fileID: 8864418158315845808}
 --- !u!222 &1478472940706188410
 CanvasRenderer:

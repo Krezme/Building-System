@@ -10,7 +10,6 @@ public abstract class ReversingSlotButtonsFunc : MonoBehaviour
     public abstract bool IsButtonAvailable();
 
     public virtual void ReverseBuildingSlot() {
-        PlayerController.instance.ResetFocus();
+        FocusSlotFunc.ResetFocus();
     }
-
 }

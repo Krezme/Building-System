@@ -5,13 +5,13 @@ using UnityEngine;
 public class DestroyButtonFunc : ReversingSlotButtonsFunc
 {
     public override bool IsButtonAvailable() {
-        return PlayerController.instance.focusedBuildingSlot.CanDestroyBuilding();
+        return FocusSlotFunc.focusedBuildingSlot.CanDestroyBuilding();
     }
 
     public override void ReverseBuildingSlot()
     {
-        if (PlayerController.instance.focusedBuildingSlot != null) {
-            PlayerController.instance.focusedBuildingSlot.ReturnBuildingSlotToDefault();
+        if (FocusSlotFunc.focusedBuildingSlot != null) {
+            FocusSlotFunc.focusedBuildingSlot.ReturnBuildingSlotToDefault();
         }
         base.ReverseBuildingSlot();
     }

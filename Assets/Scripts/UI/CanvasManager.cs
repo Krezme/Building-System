@@ -28,9 +28,7 @@ public class CanvasManager : MonoBehaviour
     public List<BuildRequestUI> buildRequestUIs;
 
     [Header("Resources References")]
-    public TMP_Text currentWoodAmountText;
-    public TMP_Text currentStoneAmountText;
-    public TMP_Text currentMetalAmountText;
+    public ResourcesTMP_TextComponents currentResourcesAmountTexts;
 
     public void ClearBuildRequestUIsList() {
         for (int i = 0; i < buildRequestUIs.Count; i++) {

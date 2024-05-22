@@ -1,11 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using JetBrains.Annotations;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Resources : MonoBehaviour //! Can divide this into inherited classes
+public class Resources : MonoBehaviour
 {
     #region Singleton
     public static Resources instance;

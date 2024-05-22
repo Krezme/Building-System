@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputs : MonoBehaviour
 {   
-    #region Sigleton
+    #region Singleton
     public static PlayerInputs instance;
 
     void Awake() {
@@ -27,30 +27,4 @@ public class PlayerInputs : MonoBehaviour
     public void FireInput(bool isPressed) {
         onFire = isPressed;
     }
-
-    /* public bool isCursorLocked;
-    public Vector2 move;
-    public Vector2 look;
-    
-    public void OnMove(InputValue value)
-    {
-        MoveInput(value.Get<Vector2>());
-    }
-
-    public void OnLook(InputValue value)
-    {
-        if (!isCursorLocked){
-            LookInput(value.Get<Vector2>());
-        }
-    }
-
-    public void MoveInput(Vector2 newMoveDirection)
-    {
-        move = newMoveDirection;
-    } 
-
-    public void LookInput(Vector2 newLookDirection)
-    {
-        look = newLookDirection;
-    }*/
 } 

@@ -32,7 +32,7 @@ public class BuildRequestUI : MonoBehaviour
     }
 
     public void TryBuilding() {
-        if (buildingSlotToActivate.TrySpendResources(houseUpgradeInfoToShow.woodRequired, houseUpgradeInfoToShow.stoneRequired, houseUpgradeInfoToShow.metalRequired)) {
+        if (buildingSlotToActivate.TrySpendingResources(houseUpgradeInfoToShow.woodRequired, houseUpgradeInfoToShow.stoneRequired, houseUpgradeInfoToShow.metalRequired)) {
             buildingSlotToActivate.SpawnNextBuilding(houseUpgradeInfoToShow);
             button.onClick.RemoveAllListeners();
             PlayerController.instance.ResetFocus();

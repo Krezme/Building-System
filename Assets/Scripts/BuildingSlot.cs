@@ -26,7 +26,7 @@ public class BuildingSlot : MonoBehaviour
         }
     }
 
-    public bool TrySpendResources (int woodCost, int stoneCost, int metalCost) {
+    public bool TrySpendingResources (int woodCost, int stoneCost, int metalCost) {
         if (woodCost <= Resources.instance.woodResource.Amount && stoneCost <= Resources.instance.stoneResource.Amount && metalCost <= Resources.instance.metalResource.Amount) {
             Debug.Log("TRUE?");
             Resources.instance.woodResource.SubtractResource(woodCost);

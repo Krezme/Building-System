@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BuildingRequestPanelUI : MonoBehaviour
 {
@@ -33,7 +32,7 @@ public class BuildingRequestPanelUI : MonoBehaviour
         return newBuildRequestUI;
     }
 
-    public void CheckButtonAvailability(ReversingSlotButtonsFunc reversingSlotButtonsFunc) {
+    private void CheckButtonAvailability(ReversingSlotButtonsFunc reversingSlotButtonsFunc) {
         if (HasFocusedBuildingSlot) {
             reversingSlotButtonsFunc.button.interactable = reversingSlotButtonsFunc.IsButtonAvailable();
         }

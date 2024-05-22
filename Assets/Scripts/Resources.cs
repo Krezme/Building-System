@@ -21,7 +21,7 @@ public class Resources : MonoBehaviour
     public ResourceStatistics resourceStats;
 
     void Start () {
-        resourceStats.AddToAllResources(resourceStats.woodResource.startAmount, resourceStats.stoneResource.startAmount, resourceStats.woodResource.startAmount);
+        resourceStats.SetDefaultResourceAmount();
     }
 
     public void AddWoodResourceButton() {

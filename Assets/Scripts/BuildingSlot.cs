@@ -26,7 +26,6 @@ public class BuildingSlot : MonoBehaviour
     }
 
     public void SpawnNextBuilding (HouseUpgradeInfo houseToPlace) {
-        Debug.Log(houseToPlace.buildingName + " 1 " + placableHouses[placableHouses.Count-1].buildingName);
         if (placableHouses[placableHouses.Count-1].nextHouses.Count <= 0)
         {
             Debug.Log("Maxed out the upgrades");

@@ -9,6 +9,10 @@ public class ResourceStatistics {
     public Stone stoneResource;
     public Metal metalResource;
 
+    public void SetDefaultResourceAmount() {
+        AddToAllResources(woodResource.startAmount, stoneResource.startAmount, woodResource.startAmount);
+    }
+
     public void AddToAllResources(int woodAmount, int stoneAmount, int metalAmount) {
         woodResource.AddResource(woodAmount);
         stoneResource.AddResource(stoneAmount);

@@ -1440,15 +1440,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd366ae9da88997498c1c63aa67e1b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  woodResource:
-    startAmount: 100
-    amountToAddPerButtonClick: 10
-  stoneResource:
-    startAmount: 100
-    amountToAddPerButtonClick: 10
-  metalResource:
-    startAmount: 100
-    amountToAddPerButtonClick: 10
+  resourceStats:
+    woodResource:
+      startAmount: 100
+      amountToAddPerButtonClick: 10
+    stoneResource:
+      startAmount: 100
+      amountToAddPerButtonClick: 10
+    metalResource:
+      startAmount: 100
+      amountToAddPerButtonClick: 10
 --- !u!114 &1649312816
 MonoBehaviour:
   m_ObjectHideFlags: 0

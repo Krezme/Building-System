@@ -18,25 +18,21 @@ public class Resources : MonoBehaviour
     }
     #endregion
 
-    public Wood woodResource;
-    public Stone stoneResource;
-    public Metal metalResource;
+    public ResourceStatistics resourceStats;
 
     void Start () {
-        woodResource.AddResource(woodResource.startAmount);
-        stoneResource.AddResource(stoneResource.startAmount);
-        metalResource.AddResource(metalResource.startAmount);
+        resourceStats.AddToAllResources(resourceStats.woodResource.startAmount, resourceStats.stoneResource.startAmount, resourceStats.woodResource.startAmount);
     }
 
     public void AddWoodResourceButton() {
-        woodResource.AddResourceButtonClick();
+        resourceStats.woodResource.AddResourceButtonClick();
     }
 
     public void AddStoneResourceButton() {
-        stoneResource.AddResourceButtonClick();
+        resourceStats.stoneResource.AddResourceButtonClick();
     }
 
     public void AddMetalResourceButton() {
-        metalResource.AddResourceButtonClick();
+        resourceStats.metalResource.AddResourceButtonClick();
     }
 }

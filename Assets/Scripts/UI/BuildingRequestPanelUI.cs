@@ -9,24 +9,31 @@ public class BuildingRequestPanelUI : MonoBehaviour
     public GameObject buildingRequestUIPrefab;
     public Animator animator;
     
-    private bool focusedBuildingSlot;
+    private bool hasFocusedBuildingSlot;
 
-    public bool FocusedBuildingSlot {
-        get { return focusedBuildingSlot; }
+    public bool HasFocusedBuildingSlot {
+        get { return hasFocusedBuildingSlot; }
         set {
-            focusedBuildingSlot = value;
-            if (!focusedBuildingSlot) {
+            hasFocusedBuildingSlot = value;
+            if (!hasFocusedBuildingSlot) {
                 CanvasManager.instance.ClearBuildRequestUIsList();
             } 
-            ToggleAnimation(focusedBuildingSlot);
+            ToggleAnimation(hasFocusedBuildingSlot);
+            CheckDestroyButtonAvailability();
         }
     }
 
     public GameObject InstantiateBuildRequestUI() {
-        Debug.Log("Hello Instantiating");
         GameObject newBuildRequestUI = Instantiate(buildingRequestUIPrefab, mask.transform);
         CanvasManager.instance.buildRequestUIs.Add(newBuildRequestUI.GetComponent<BuildRequestUI>());
         return newBuildRequestUI;
+    }
+
+    public void CheckDestroyButtonAvailability() {
+        if (HasFocusedBuildingSlot) {
+            Debug.Log("ASDASDASD");
+            CanvasManager.instance.destroyButtonFunc.button.interactable = PlayerController.instance.focusedBuildingSlot.CanDestroyBuilding();
+        }
     }
 
     private void ToggleAnimation (bool state) {

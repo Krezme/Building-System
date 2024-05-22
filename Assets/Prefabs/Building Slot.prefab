@@ -148,5 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec54e220fd22cfb4fb772c42413a48fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placableHouses:
-  - {fileID: 11400000, guid: db0833b85a693b046a62f02b73d7dfeb, type: 2}
+  defaultPlacableHouse: {fileID: 11400000, guid: db0833b85a693b046a62f02b73d7dfeb,
+    type: 2}
+  placableHouses: []

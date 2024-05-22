@@ -573,6 +573,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1649312812}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &852591434 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4804865644494451341, guid: 6770306fdf1e1be42a3653f10d82546f,
+    type: 3}
+  m_PrefabInstance: {fileID: 644179755710336939}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4ca0e732da8cb844b52735eb57a4441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &958776233 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3745884590589201198, guid: b62d70e1cba196044b1068be57638085,
@@ -739,6 +751,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingRequestScrollGridPanel: {fileID: 1261432989}
+  downgradeButtonFunc: {fileID: 644179755710336940}
+  destroyButtonFunc: {fileID: 852591434}
   buildRequestUIs: []
   currentWoodAmountText: {fileID: 9659623}
   currentStoneAmountText: {fileID: 65845570}
@@ -983,6 +997,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6770306fdf1e1be42a3653f10d82546f, type: 3}
+--- !u!114 &644179755710336940 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4316294913047621217, guid: 6770306fdf1e1be42a3653f10d82546f,
+    type: 3}
+  m_PrefabInstance: {fileID: 644179755710336939}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0696074caf8085343b7637f9cb8f09bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2350063743569844523 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5082580145501740397, guid: 05fc5043b20b4144f88c48638114a7a3,

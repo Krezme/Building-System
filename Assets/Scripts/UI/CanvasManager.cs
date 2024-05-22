@@ -21,6 +21,8 @@ public class CanvasManager : MonoBehaviour
     #endregion
 
     public BuildingRequestPanelUI buildingRequestScrollGridPanel;
+    public DowngradeButtonFunc downgradeButtonFunc;
+    public DestroyButtonFunc destroyButtonFunc;
     
     public List<BuildRequestUI> buildRequestUIs;
     public TMP_Text currentWoodAmountText;
@@ -32,5 +34,9 @@ public class CanvasManager : MonoBehaviour
             Destroy(buildRequestUIs[i].gameObject);
         }
         buildRequestUIs.Clear();
+    }
+
+    public void ToggleButtonInteractivity(Button button, bool state) {
+        button.interactable = state;
     }
 }

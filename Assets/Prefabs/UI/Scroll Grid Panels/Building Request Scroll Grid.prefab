@@ -481,6 +481,7 @@ GameObject:
   - component: {fileID: 1215531176560245739}
   - component: {fileID: 4086121659633109366}
   - component: {fileID: 7796452842844551299}
+  - component: {fileID: 4804865644494451341}
   m_Layer: 5
   m_Name: Destroy Button
   m_TagString: Untagged
@@ -589,7 +590,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4086121659633109366}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4804865644494451341}
+        m_TargetAssemblyTypeName: DestroyButtonFunc, Assembly-CSharp
+        m_MethodName: DestroyHouse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4804865644494451341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3903875505139904819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4ca0e732da8cb844b52735eb57a4441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 7796452842844551299}
 --- !u!1 &6117599009756685319
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +628,7 @@ GameObject:
   - component: {fileID: 7581643683463466495}
   - component: {fileID: 3919548052600130447}
   - component: {fileID: 4174026912245247723}
+  - component: {fileID: 4316294913047621217}
   m_Layer: 5
   m_Name: Downgrade Button
   m_TagString: Untagged
@@ -711,6 +738,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4316294913047621217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6117599009756685319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0696074caf8085343b7637f9cb8f09bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9023535299776303130
 GameObject:
   m_ObjectHideFlags: 0

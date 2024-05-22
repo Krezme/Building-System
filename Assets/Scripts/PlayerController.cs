@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask layerMask;
 
-    private BuildingSlot focusedBuildingSlot;
+    public BuildingSlot focusedBuildingSlot {get; private set;} 
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +59,10 @@ public class PlayerController : MonoBehaviour
 
     public bool TryToFocusBuildingSlot(BuildingSlot buildingSlotToFocus, bool focusState) {
         if (focusedBuildingSlot != buildingSlotToFocus) {
+            if (focusedBuildingSlot != null) {
+                ResetFocus();
+            }
+
             SetFocusedBuildingSlot(buildingSlotToFocus, true);
             return true;
         }
@@ -67,12 +71,13 @@ public class PlayerController : MonoBehaviour
     }
 
     private void SetFocusedBuildingSlot (BuildingSlot buildingSlotToFocus, bool focusState) {
-        buildingSlotToFocus.FocusThis(focusState);
         if (focusState) {
             focusedBuildingSlot = buildingSlotToFocus;
         }
         else {
+            CanvasManager.instance.buildingRequestScrollGridPanel.HasFocusedBuildingSlot = false;
             focusedBuildingSlot = null;
         }
+        buildingSlotToFocus.FocusThis(focusState);
     }
 }

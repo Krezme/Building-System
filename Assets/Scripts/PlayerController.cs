@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
         focusedBuildingSlot = null;
     }
 
-    private void SetFocusedBuildingSlot (BuildingSlot buildingSlotToFocus, bool focusState) {
+    public void SetFocusedBuildingSlot (BuildingSlot buildingSlotToFocus, bool focusState) {
         focusedBuildingSlot = buildingSlotToFocus;
         buildingSlotToFocus.FocusThis(focusState);
     }

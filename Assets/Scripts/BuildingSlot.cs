@@ -19,6 +19,18 @@ public class BuildingSlot : MonoBehaviour
         }
     }
 
+    public bool TrySpendResources (int woodCost, int stoneCost, int metalCost) {
+        if (woodCost <= Resources.instance.Wood && stoneCost <= Resources.instance.Stone && metalCost <= Resources.instance.Metal) {
+            Debug.Log("TRUE?");
+            Resources.instance.SubtractWood(woodCost);
+            Resources.instance.SubtractStone(stoneCost);
+            Resources.instance.SubtractMetal(metalCost);
+            return true;
+        }
+        
+        return false;
+    }
+
     public void SpawnNextHouse (HouseUpgradeInfo houseToPlace) {
         Debug.Log(houseToPlace.buildingName + " 1 " + placableHouses[placableHouses.Count-1].buildingName);
         if (placableHouses[placableHouses.Count-1].nextHouses.Count <= 0)

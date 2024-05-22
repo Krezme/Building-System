@@ -32,17 +32,23 @@ public class BuildRequestUI : MonoBehaviour
     public void SetVariables (HouseUpgradeInfo houseToShow, BuildingSlot buildingSlot) {
         houseUpgradeInfoToShow = houseToShow;
         buildingSlotToActivate = buildingSlot;
-        UpdateBuildRequest();
+        BuildingRequest();
     }
 
-    private void UpdateBuildRequest() {
+    private void BuildingRequest() {
         nameText.text = houseUpgradeInfoToShow.buildingName;
         woodCostAmountText.text = houseUpgradeInfoToShow.woodRequired.ToString();
         stoneCostAmountText.text = houseUpgradeInfoToShow.stoneRequired.ToString();
         metalCostAmountText.text = houseUpgradeInfoToShow.metalRequired.ToString();
-        button.onClick.AddListener(() => PlayerController.instance.ResetFocus());
-        button.onClick.AddListener(() => buildingSlotToActivate.SpawnNextHouse(houseUpgradeInfoToShow));
-        button.onClick.AddListener(() => button.onClick.RemoveAllListeners());
+        button.onClick.AddListener(() => TryBuilding());
+    }
+
+    public void TryBuilding() {
+        if (buildingSlotToActivate.TrySpendResources(houseUpgradeInfoToShow.woodRequired, houseUpgradeInfoToShow.stoneRequired, houseUpgradeInfoToShow.metalRequired)) {
+            PlayerController.instance.ResetFocus();
+            buildingSlotToActivate.SpawnNextHouse(houseUpgradeInfoToShow);
+            button.onClick.RemoveAllListeners();
+        }
     }
 
     private void ToggleAnimation (bool state) {

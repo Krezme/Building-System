@@ -17,4 +17,4 @@ MonoBehaviour:
   woodRequired: 30
   stoneRequired: 0
   metalRequired: 0
-  nextHouse: {fileID: 0}
+  nextHouses: []

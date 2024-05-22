@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -19,4 +21,7 @@ public class CanvasManager : MonoBehaviour
     #endregion
     
     public List<BuildRequestUI> buildRequestUIs;
+    public TMP_Text currentWoodAmountText;
+    public TMP_Text currentStoneAmountText;
+    public TMP_Text currentMetalAmountText;
 }

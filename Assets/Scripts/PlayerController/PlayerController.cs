@@ -68,6 +68,9 @@ public class PlayerController : MonoBehaviour
     public void PlayerMovement () {
         if(PlayerInputs.instance.onFire1) //if we are holding right click
         {
+            if (FocusSlotFunc.focusedBuildingSlot != null) {
+                FocusSlotFunc.ResetFocus(); // Unfocus the focused BuildingSlot
+            }
             // Making Cursor invisible
             Cursor.visible = false;
             // Locking cursor

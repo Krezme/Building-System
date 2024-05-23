@@ -67,17 +67,12 @@ Navigate to Assets / ScriptableObjects / HouseUpgradeInfo / <"Desired Scriptable
 
 The Scriptable Objects Contain:
 
-Building Name -> The building name
-
-House Prefab -> The building prefab to spawn
-
-Wood Cost -> The Wood required for building
-
-Stone Cost -> The Stone required for building
-
-Metal Cost -> The Metal required for building
-
-NextHouses (List) -> Any "HouseUpgradeInfo" placed here will be shown as upgrades to this house
+- Building Name -> The building name
+- House Prefab -> The building prefab to spawn
+- Wood Cost -> The Wood required for building
+- Stone Cost -> The Stone required for building
+- Metal Cost -> The Metal required for building
+- NextHouses (List) -> Any "HouseUpgradeInfo" placed here will be shown as upgrades to this house
 
 ### ATTENTION!
 The Default HouseUpgradeInfo does not require anything else other than HouseUpgradeInfos inside of NextHouses

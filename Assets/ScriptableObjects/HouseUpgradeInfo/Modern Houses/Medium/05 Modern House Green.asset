@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f378292f65201cf43a9cbe1cd0df5ad2, type: 3}
+  m_Name: 05 Modern House Green
+  m_EditorClassIdentifier: 
+  buildingName: Modern Medium House Green
+  housePrefab: {fileID: 100000, guid: 142c9543c08ae014bad9d177ad54a989, type: 3}
+  woodRequired: 50
+  stoneRequired: 30
+  metalRequired: 50
+  nextHouses:
+  - {fileID: 11400000, guid: 272996c7f632f2c4bb4f92262a072609, type: 2}
+  - {fileID: 11400000, guid: fefb11c4157571348a3ff30a0e81f14b, type: 2}

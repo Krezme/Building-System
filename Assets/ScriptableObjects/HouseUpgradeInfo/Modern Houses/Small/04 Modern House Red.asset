@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f378292f65201cf43a9cbe1cd0df5ad2, type: 3}
+  m_Name: 04 Modern House Red
+  m_EditorClassIdentifier: 
+  buildingName: Modern Small House Red
+  housePrefab: {fileID: 100000, guid: 2dbee28eacba7dd42845e0153c4da642, type: 3}
+  woodRequired: 30
+  stoneRequired: 20
+  metalRequired: 30
+  nextHouses:
+  - {fileID: 11400000, guid: 91a638985bd8ed84e92a869072fff4b5, type: 2}
+  - {fileID: 11400000, guid: 37284c03a0bf6db44b8e497dbd3a0500, type: 2}
+  - {fileID: 11400000, guid: e79c69f4e5136774cbb5e231dbfa0201, type: 2}
+  - {fileID: 11400000, guid: 88e8e31d930cdc344a06036d837364ef, type: 2}
+  - {fileID: 11400000, guid: 3a8faa5aa1d044547822179e4656fac8, type: 2}
+  - {fileID: 11400000, guid: 6476e2d715591834291b8ecf4c3d36f7, type: 2}
+  - {fileID: 11400000, guid: f6dde8b5d095ffd49aaab4f1f5185944, type: 2}

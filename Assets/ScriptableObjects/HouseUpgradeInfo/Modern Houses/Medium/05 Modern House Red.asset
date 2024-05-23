@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f378292f65201cf43a9cbe1cd0df5ad2, type: 3}
-  m_Name: 03 House
+  m_Name: 05 Modern House Red
   m_EditorClassIdentifier: 
-  buildingName: Stone House
-  housePrefab: {fileID: 100000, guid: de56bad3c5656b74d8cc92d71dee9f62, type: 3}
-  woodRequired: 10
-  stoneRequired: 50
-  metalRequired: 0
-  nextHouses: []
+  buildingName: Modern Medium House Red
+  housePrefab: {fileID: 100000, guid: 92dcd407350173049ab8c86482fadf42, type: 3}
+  woodRequired: 50
+  stoneRequired: 30
+  metalRequired: 50
+  nextHouses:
+  - {fileID: 11400000, guid: 7f4eb4e3db1d4a9408ef633d7e4332b8, type: 2}
+  - {fileID: 11400000, guid: 46351553cf360924ca691839d727b822, type: 2}

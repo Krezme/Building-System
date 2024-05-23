@@ -57,6 +57,23 @@ location X = 0, Y = 0, Z = 0 and rotation X = 0, Y = 0, Z = 0 and scale X = 1, Y
 
 When adding the Building Slot prefab (Assets / Building Slot / Building Slot.prefab) make sure that it is under the Building slot manager
 
+## How to edit HouseUpgradeInfo
+
+Navigate to Assets / ScriptableObjects / HouseUpgradeInfo / <"Desired Scriptable Object You want to change">
+
+The Scriptable Objects Contain:
+
+Building Name -> The building name
+House Prefab -> The building prefab to spawn
+Wood Cost -> The Wood required for building
+Stone Cost -> The Stone required for building
+Metal Cost -> The Metal required for building
+
+NextHouses (List) -> Any "HouseUpgradeInfo" placed here will be shown as upgrades to this house
+
+### ATTENTION!
+The Default HouseUpgradeInfo does not require anything else other than HouseUpgradeInfos inside of NextHouses
+
 ## Extra Features
 
 Branding upgrade paths for buildings
@@ -66,6 +83,9 @@ Downgrade functionality to reverse the upgrade
 Automatic Scrollable Panels UI (Left and Right) that is filled depending the requirements of the system
 
 ## Planned Features
+
+Making HouseUpgradeInfo.cs to inherit a parent script. This will allot the Default HouseUpgradeInfo to only contain the NextHouses List.
+This will remove the not essential fields from inside the Default HouseUpgradeInfo SO.
 
 Buildings will generate resources (Depending on the building).
 

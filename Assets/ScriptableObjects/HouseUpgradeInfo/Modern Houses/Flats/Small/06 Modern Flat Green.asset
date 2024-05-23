@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f378292f65201cf43a9cbe1cd0df5ad2, type: 3}
+  m_Name: 06 Modern Flat Green
+  m_EditorClassIdentifier: 
+  buildingName: Modern Small Flat Green
+  housePrefab: {fileID: 100000, guid: 35807f23e7899e541b60b2fb2bbb51ef, type: 3}
+  woodRequired: 100
+  stoneRequired: 50
+  metalRequired: 100
+  nextHouses: []

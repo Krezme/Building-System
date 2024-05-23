@@ -49,13 +49,10 @@ On the bottom of the right panel there are downgrade and destroy buttons:
 
 To setup a new scene Add the following prefabs:
 
-Assets / Prefabs / Controller / Player.prefab
-
-Assets / Prefabs / UI / Canvas.prefab
-
-Assets / Building Slot / Building Slot Manager.prefab
-
-Assets / Building Slot / Building Slot.prefab
+- Assets / Prefabs / Controller / Player.prefab
+- Assets / Prefabs / UI / Canvas.prefab
+- Assets / Building Slot / Building Slot Manager.prefab
+- Assets / Building Slot / Building Slot.prefab
 
 ### ATTENTION!
 

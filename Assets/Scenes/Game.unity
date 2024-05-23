@@ -1526,13 +1526,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f6f295ecede414e8843e4a97b66317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseSensitivity: 10
+  normalSpeed: 15
+  sprintSpeed: 25
   layerMask:
     serializedVersion: 2
     m_Bits: 128
-  sensitivity: 10
-  slowSpeed: 0
-  normalSpeed: 15
-  sprintSpeed: 25
 --- !u!4 &1649312812
 Transform:
   m_ObjectHideFlags: 0

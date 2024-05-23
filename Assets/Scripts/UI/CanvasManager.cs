@@ -21,15 +21,24 @@ public class CanvasManager : MonoBehaviour
     #endregion
 
     [Header("BuildingSlot References")]
+    [Tooltip("The BuildingSlotsPanelUI script that is responsible for the functionality")]
     public BuildingSlotsPanelUI buildingSlotsPanelUI;
 
     [Header("BuildingRequest References")]
+    [Tooltip("The BuildingRequestPanelUI script that is responsible for the functionality")]
     public BuildingRequestPanelUI buildingRequestScrollGridPanel;
+
+    // List of BuildRequestUI that are instantiated on the BuildingRequestPanelUI
+    [HideInInspector]
     public List<BuildRequestUI> buildRequestUIs;
 
     [Header("Resources References")]
+    [Tooltip("The Resource text components responsible to show the the current resource amounts")]
     public ResourcesTMP_TextComponents currentResourcesAmountTexts;
 
+    /// <summary>
+    /// Function to clear the BuildRequestUI list and return it to default
+    /// </summary>
     public void ClearBuildRequestUIsList() {
         for (int i = 0; i < buildRequestUIs.Count; i++) {
             Destroy(buildRequestUIs[i].gameObject);
@@ -37,6 +46,11 @@ public class CanvasManager : MonoBehaviour
         buildRequestUIs.Clear();
     }
 
+    /// <summary>
+    /// Function that toggles interactable
+    /// </summary>
+    /// <param name="button"> Button to toggle </param>
+    /// <param name="state"> Interactable state </param>
     public void ToggleButtonInteractivity(Button button, bool state) {
         button.interactable = state;
     }

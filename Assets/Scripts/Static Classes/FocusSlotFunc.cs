@@ -39,8 +39,10 @@ public static class FocusSlotFunc
     private static void SetFocusedBuildingSlot (BuildingSlot buildingSlotToFocus, bool focusState) {
         if (focusState) {
             focusedBuildingSlot = buildingSlotToFocus;
+            focusedBuildingSlot.focusedParticleSystem.SetActive(focusState);
         }
         else {
+            focusedBuildingSlot.focusedParticleSystem.SetActive(focusState);
             HasFocusedBuildingSlot = false;
             focusedBuildingSlot = null;
         }

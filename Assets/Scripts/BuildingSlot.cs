@@ -11,6 +11,8 @@ public class BuildingSlot : MonoBehaviour
 
     private GameObject spawnedHouse;
 
+    public GameObject focusedParticleSystem;
+
     public void Start() {
         placableHouses.Add(defaultPlacableHouse);
     }

@@ -1529,6 +1529,10 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 128
+  sensitivity: 10
+  slowSpeed: 0
+  normalSpeed: 15
+  sprintSpeed: 25
 --- !u!4 &1649312812
 Transform:
   m_ObjectHideFlags: 0
@@ -1610,7 +1614,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04b460480918154384fec50b1457a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onFire: 0
+  onMove: {x: 0, y: 0}
+  onLook: {x: 0, y: 0}
+  onFire0: 0
+  onFire1: 0
+  onSprint: 0
 --- !u!1 &2129688336
 GameObject:
   m_ObjectHideFlags: 0

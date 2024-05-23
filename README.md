@@ -1,4 +1,4 @@
-# Building System
+# Building System - By Georgi Aleksandrov
 
 Building System is a project that is meant to showcase my ability to work on games. This Project in particular focuses on creating a system that builds 
 constructions with the use of resources and place them on pre-defined slots.
@@ -74,3 +74,10 @@ Buildings will generate resources (Depending on the building).
 When you press right click and Maximize the Game window inside Unity the mouse does not hide when you try to press Right Click and fly around with the camera.
 
 If Building Slot prefab is not under a Building Slot Manager the Left Focusing Menu will to get a button corresponding to the Building Slot. (Made this way for performance reasons)
+
+## Used Packages
+
+PBR medieval houses pack : https://assetstore.unity.com/packages/3d/environments/fantasy/pbr-medieval-houses-pack-71546
+
+SimplePoly City - Low Poly Assets : https://assetstore.unity.com/packages/3d/environments/simplepoly-city-low-poly-assets-58899
+

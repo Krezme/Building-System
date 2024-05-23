@@ -1529,7 +1529,7 @@ MonoBehaviour:
   mouseSensitivity: 10
   normalSpeed: 15
   sprintSpeed: 25
-  layerMask:
+  buildingSlotLayerMask:
     serializedVersion: 2
     m_Bits: 128
 --- !u!4 &1649312812

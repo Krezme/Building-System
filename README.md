@@ -5,6 +5,8 @@ constructions with the use of resources and place them on pre-defined slots.
 
 ## How to test the project
 
+This is a Unity URP project.
+
 The project was made using Unity 2023.2.10f1. 
 This is the preferred version to run this project in, however it should work with any newer versions as well. 
 However this cannot be guaranteed.

@@ -98,6 +98,8 @@ When you press right click and Maximize the Game window inside Unity the mouse d
 
 If Building Slot prefab is not under a Building Slot Manager the Left Focusing Menu will to get a button corresponding to the Building Slot. (Made this way for performance reasons)
 
+If player does not have enough resources there isn't a message to tell the player that they have insufficient resources after attempting to build/upgrade the building.
+
 ## Used Packages
 
 PBR medieval houses pack : https://assetstore.unity.com/packages/3d/environments/fantasy/pbr-medieval-houses-pack-71546

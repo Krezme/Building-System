@@ -99,13 +99,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceStats:
     woodResource:
-      startAmount: 100
+      startAmount: 300
       amountToAddPerButtonClick: 10
     stoneResource:
-      startAmount: 100
+      startAmount: 300
       amountToAddPerButtonClick: 10
     metalResource:
-      startAmount: 100
+      startAmount: 300
       amountToAddPerButtonClick: 10
 --- !u!114 &3080427114346084831
 MonoBehaviour:

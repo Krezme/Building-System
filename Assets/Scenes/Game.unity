@@ -12685,6 +12685,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1649312815}
+    - target: {fileID: 5630299778203088406, guid: 2f2f9e834ceba684d80049dc074b6717,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7636819976335442775, guid: 2f2f9e834ceba684d80049dc074b6717,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -12831,21 +12836,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158931564984076264, guid: 4e39dbfa46a7d2b4781c5a82745b2ecd,
-        type: 3}
-      propertyPath: resourceStats.woodResource.startAmount
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158931564984076264, guid: 4e39dbfa46a7d2b4781c5a82745b2ecd,
-        type: 3}
-      propertyPath: resourceStats.metalResource.startAmount
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158931564984076264, guid: 4e39dbfa46a7d2b4781c5a82745b2ecd,
-        type: 3}
-      propertyPath: resourceStats.stoneResource.startAmount
-      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

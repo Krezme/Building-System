@@ -11,9 +11,6 @@ public class BuildingRequestPanelUI : MonoBehaviour
     [Tooltip("Game object to Instantiate")]
     public GameObject buildingRequestUIPrefab;
 
-    [Tooltip("Text to show when there are no more upgrades")]
-    public TMP_Text maxedOutUpgradesText;
-
     [Tooltip("The animator responsible for this game object")]
     public Animator animator;
 
@@ -43,17 +40,9 @@ public class BuildingRequestPanelUI : MonoBehaviour
         if (!FocusSlotFunc.HasFocusedBuildingSlot) {
             CanvasManager.instance.ClearBuildRequestUIsList();
         }
-        ToggleMaxedOutUpgradesText();
         ToggleAnimation(FocusSlotFunc.HasFocusedBuildingSlot);
         CheckButtonAvailability(downgradeButtonFunc);
         CheckButtonAvailability(destroyButtonFunc);
-    }
-
-    /// <summary>
-    /// Function to Toggle the maxed out upgrades text
-    /// </summary>
-    private void ToggleMaxedOutUpgradesText() {
-        maxedOutUpgradesText.enabled = FocusSlotFunc.HasFocusedBuildingSlot && CanvasManager.instance.buildRequestUIs.Count <= 0;
     }
 
     /// <summary>

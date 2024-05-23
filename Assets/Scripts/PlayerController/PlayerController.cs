@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     }
     [Header("Player Movement Statistics")]
     public float sensitivity;
-    public float slowSpeed;
     public float normalSpeed;
     public float sprintSpeed;
 

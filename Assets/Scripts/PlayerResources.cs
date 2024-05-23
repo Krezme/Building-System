@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Resources : MonoBehaviour
+public class PlayerResources : MonoBehaviour
 {
     #region Singleton
-    public static Resources instance;
+    public static PlayerResources instance;
 
     void Awake () {
         if (instance != null) {
